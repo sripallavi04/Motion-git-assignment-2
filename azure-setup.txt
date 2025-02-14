@@ -1,0 +1,103 @@
+Steps to Create an Azure Account
+Visit Azure Website
+
+Go to Azure.
+Start Free
+
+Click on the Start free button.
+Sign Up
+
+Use your existing Microsoft account or create a new one by providing your email and creating a password.
+Fill Out Information
+
+Complete the registration form with your personal details, including billing information (note: your credit card won't be charged for free tier services).
+Identity Verification
+
+Verify your identity via phone verification and/or credit card verification.
+Complete Sign-Up
+
+Follow the remaining prompts to complete your account setup.
+Steps to Set Up a Basic Azure Virtual Machine (VM)
+Log in to Azure Portal
+
+Sign in at Azure Portal.
+Create a Resource
+
+Click on Create a resource from the left-hand sidebar.
+Choose Virtual Machine
+
+Select Virtual Machine from the list of resources.
+Configure Basics
+
+Subscription: Choose your subscription.
+Resource Group: Create a new resource group or use an existing one.
+VM Name: Enter a name for your VM.
+Region: Select your region.
+Image: Choose Ubuntu Server (or another preferred OS).
+Size: Choose an appropriate VM size, e.g., Standard_B1s.
+Administrator Account
+
+Authentication Type: Choose SSH public key.
+Username: Enter a username.
+SSH Public Key: Paste your public SSH key.
+Networking
+
+Virtual Network: Use an existing network or create a new one.
+Public IP: Ensure it is enabled for SSH access.
+Review and Create
+
+Review all configurations and click Create.
+Steps to Deploy a Sample Python Script
+Connect to VM via SSH:
+SSH Command: Use the following command to connect. Replace path-to-your-private-key with the path to your private SSH key, username with your VM username, and your-vm-public-ip with your VM's public IP address.
+
+
+
+ssh -i "path-to-your-private-key" username@your-vm-public-ip
+Prepare the VM:
+Update Packages:
+
+
+
+
+sudo apt update && sudo apt upgrade -y
+Install Python:
+
+
+
+sudo apt install python3 -y
+Create and Run the Python Script:
+Create Script File:
+
+Create a new Python script file named add_numbers.py
+
+
+nano add_numbers.py
+Add Script Content:
+
+Add the following content to the file:
+python
+Copy Code
+
+
+def add_numbers(a, b):
+    return a + b
+
+if __name__ == "__main__":
+    num1 = 10
+    num2 = 20
+    print(f"The sum of {num1} and {num2} is {add_numbers(num1, num2)}")
+Save and Close:
+
+Press Ctrl + X, then press Y, and Enter to save and exit the editor.
+Run the Script:
+
+Run the Python script with the following command:
+
+
+python3 add_numbers.py
+Verify Output:
+
+You should see the following output:
+The sum of 10 and 20 is 30
+This content provides comprehensive instructions for setting up an Azure account, creating a basic Azure VM, and deploying a sample Python script. It is structured clearly to guide the user through each step effectively.
