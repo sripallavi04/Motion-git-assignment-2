@@ -3,7 +3,6 @@ Visit Azure Website
 
 Go to Azure.
 Start Free
-
 Click on the Start free button.
 Sign Up
 
